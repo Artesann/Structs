@@ -29,7 +29,7 @@ Graph::Graph(int *data, int nodes, int arcs)
 		}
 	}
 }
-//�������� ����� ����������
+//Алгорим нахождения значения наименьшего разреза сети
 void Graph::Run(int sorce, int runoff)
 {
 	int resFlow = 0;

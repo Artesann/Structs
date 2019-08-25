@@ -3,132 +3,8 @@
 
 using namespace std;
 
-// #define MAX 1000
-// class Stack
-// {
-// private:
 
-	// int data[MAX];
-	// int count;
-
-// public:
-	// Stack();
-
-	// void print_st();
-
-	// void push(int e);
-
-	// int get_top() { return data[MAX - count];}
-
-	// int pop();
-
-	// int len() { return count; }
-// };
-
-// Stack::Stack()
-// {
-	// this->count = 0;
-
-// }
-
-// void Stack::print_st()
-// {
-	// for(int i = MAX - count+1; i < MAX; i++)
-	// {
-		// std::cout << i << " : " << data[i] << std::endl;
-	// }
-// }
-
-// void Stack::push(int e)
-// {
-	// if (MAX > count) {
-		// count++;
-		// data[MAX - count] = e;
-	// }
-	// else
-	// {
-		// std::cout << "stack overflow" << std::endl;
-	// }
-// }
-
-// int Stack::pop()
-// {
-	// if (count > 0) {
-		// int e = data[MAX - count];
-		// count--;
-		// return e;
-	// }
-	// else 
-	// {	
-		// std::cout << "Stack is empty" << std::endl;
-		// return 0;
-	// }
-// }
-
-
-// class CustomStack
-// {
-// private:
-
-	// Stack stack;
-
-// public:
-	// CustomStack();
-	// ~CustomStack();
-
-	// int get_item (int i);
-	
-	// void set_item (int ind, int value);
-
-	// void push(int e) { stack.push(e); }
-
-	// int pop() { return stack.pop(); }
-
-	// void pr() { stack.print_st(); }//для отладки
-	
-	// int length() {	stack.len(); }
-	
-// };
-
-// void CustomStack::set_item(int ind, int value)
-// {
-	// Stack boof;
-	// for (int i = 0; i < ind; i++)
-	// {
-		// boof.push(stack.pop());
-	// }
-	// stack.pop();
-	// stack.push(value);
-	// for (int i = 0; i < ind; i++)
-	// {
-		// stack.push(boof.pop());
-	// }
-// }
-
-// int CustomStack::get_item(int ind)
-// {
-	// if (ind >= 0 && ind < stack.len()) {
-		// Stack boof;
-		// for (int i = 0; i < ind; i++)
-		// {
-			// boof.push(stack.pop());
-		// }
-		// int e = stack.get_top();
-		// for (int i = 0; i < ind; i++)
-		// {
-			// stack.push(boof.pop());
-		// }
-		// return e;
-	// }
-	// else
-	// {
-		// std::cout << "out of range "<< std::endl;
-		// return 0;
-	// }
-// }
-
-
-
+//Сортировка подсчетом сравнений для массива
 void sorts(int *in, int*out, int u, int v, int n)
 {
 	int *count = new int [v+1];
@@ -149,7 +25,7 @@ void sorts(int *in, int*out, int u, int v, int n)
 		count[in[j]] = --i;
 	}
 }
-
+//Сортировка посчетом сравнений для прегруженного стека
 void sort(CustomStack &in, CustomStack &out, int u, int v, int n)
 {
 	CustomStack count;
